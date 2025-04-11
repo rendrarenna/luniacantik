@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lunia</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg-light: linear-gradient(to right, #ffdde1, #ee9ca7);
+      --bg-dark: #1e1e2f;
+      --card-light: white;
+      --card-dark: #2c2c3e;
+      --text-light: #333;
+      --text-dark: #eee;
+      --nav-light: #ff8fab;
+      --nav-dark: #333;
+      --header-light: #ff6f91;
+      --header-dark: #444;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: all 0.3s ease;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--header-light);
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    body.dark header {
+      background-color: var(--header-dark);
+    }
+
+    nav {
+      background-color: var(--nav-light);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    body.dark nav {
+      background-color: var(--nav-dark);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .toggle-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 15px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .content {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .anime-card {
+      background: var(--card-light);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, background 0.3s;
+    }
+
+    body.dark .anime-card {
+      background: var(--card-dark);
+    }
+
+    .anime-card:hover {
+      transform: scale(1.03);
+    }
+
+    .anime-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .anime-card h3 {
+      margin: 10px;
+    }
+
+    .anime-card p {
+      margin: 0 10px 10px;
+      font-size: 0.9em;
+    }
+
+    footer {
+      background-color: var(--header-light);
+      text-align: center;
+      padding: 15px;
+      color: white;
+    }
+
+    body.dark footer {
+      background-color: var(--header-dark);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-button" onclick="toggleDarkMode()">🌓 Mode</button>
+
+  <header>
+    <h1>Lunia Dharmayani Wiharja🌸</h1>
+    <p>Suatu ke-lucuan dan imut-nya Lunia!</p>
+  </header>
+
+  <div class="content">
+    <div class="anime-card">
+        <img src="lunia1.png.jpeg" alt="Lunia Lucu">
+      <h3>Lunia Lucu</h3>
+      <p>LUNIA LUCU BANGET.</p>
+    </div>
+    <div class="anime-card">
+      <img src="lunia2.png.jpeg" alt="Lunia Cantik">
+      <h3>Lunia Cantik</h3>
+      <p>Lunia adalah wanita ter-cantik yang pernah aku temui.</p>
+    </div>
+    <div class="anime-card">
+      <img src="lunia3.png.jpeg" alt="Lunia imut">
+      <h3>Lunia Imut</h3>
+      <p>Manusia Ter-Imut yang pernah ada.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023-2025 Naje & Lunia.
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+
+</body>
+</html>
